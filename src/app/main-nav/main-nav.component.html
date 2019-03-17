@@ -1,9 +1,15 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+  <!-- set fixedInViewport="false"(default fixedInViewport="true") mean do not allocate free space-->
+  <!-- new => [ngClass] -->
+  <!-- [ngClass]="{hidden: !(isHandset | async)!.matches}" -->
+  <mat-sidenav
+      #drawer
+      class="sidenav"
+      fixedInViewport="false"
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="!(isHandset$ | async)">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item href="#">Link 1</a>
       <a mat-list-item href="#">Link 2</a>
@@ -18,10 +24,15 @@
         mat-icon-button
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
+        <!-- chenge name to make material icons eg group_work(_ for space) -->
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>angular-material-dashboard</span>
+      <span>Angular Material Dashboard</span>
+      <span class="spacer"></span>
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
     </mat-toolbar>
-    <!-- Add Content Here -->
+    <ng-content></ng-content>
   </mat-sidenav-content>
 </mat-sidenav-container>
