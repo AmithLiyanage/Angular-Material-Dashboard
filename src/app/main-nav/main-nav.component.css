@@ -40,3 +40,8 @@ mat-toolbar a {
     display: none;
   }
 } */
+
+nav a.active {
+  color: #039be5;
+}
+
