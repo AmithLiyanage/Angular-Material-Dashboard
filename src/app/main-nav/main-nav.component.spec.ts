@@ -7,9 +7,11 @@ import {
   MatListModule,
   MatSidenavModule,
   MatToolbarModule,
+  MatExpansionModule,
 } from '@angular/material';
 
 import { MainNavComponent } from './main-nav.component';
+//import {MatAccordion} from '@angular/core';
 
 describe('MainNavComponent', () => {
   let component: MainNavComponent;
@@ -26,6 +28,7 @@ describe('MainNavComponent', () => {
         MatListModule,
         MatSidenavModule,
         MatToolbarModule,
+        //MatExpansionModule
       ]
     }).compileComponents();
   }));

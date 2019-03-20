@@ -12,7 +12,9 @@ import {
   MatListModule,
   MatTableModule,
   MatPaginatorModule,
-  MatSortModule
+  MatSortModule,
+  MatAccordion,
+  MatExpansionModule
 } from '@angular/material';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -35,7 +37,9 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatListModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    //MatAccordion,//expand list
+    MatExpansionModule,//expand list
   ],
   providers: [],
   bootstrap: [AppComponent]

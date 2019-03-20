@@ -11,9 +11,36 @@
       [opened]="!(isHandset$ | async)">
     <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list>
+      <mat-accordion>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              This is the expansion 1 title
+            </mat-expansion-panel-header>
+            <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              This is the expansion 1 title
+            </mat-expansion-panel-header>
+            This the expansion 1 content
+          </mat-expansion-panel>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              This is the expansion 2 title
+            </mat-expansion-panel-header>
+            This the expansion 2 content
+          </mat-expansion-panel>
+        </mat-accordion>
+          </mat-expansion-panel>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              This is the expansion 2 title
+            </mat-expansion-panel-header>
+            This the expansion 2 content
+          </mat-expansion-panel>
+      </mat-accordion>
       <a mat-list-item href="#">Main view</a>
       <a mat-list-item [routerLink]="['/employees']" routerLinkActive="router-link-active" >Employee</a>
-      <a mat-list-item [routerLink]="['/datatable']" routerLinkActive="router-link-active" >Data Table</a>
+      <a mat-list-item [routerLink]="['/data-table']" routerLinkActive="router-link-active" >Data Table</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
